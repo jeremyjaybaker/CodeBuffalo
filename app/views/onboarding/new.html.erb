@@ -1,0 +1,6 @@
+<%= simple_form_for @user, url: '/onboarding', method: :post do |f| %>
+  <%= f.input :interest_categories, collection: User::INTEREST_CATEGORY_TYPES, as: :check_boxes, include_blank: false, include_hidden: false %>
+  <%= f.input :budget_type_id, collection: BudgetType.all.pluck(:name, :id), as: :radio_buttons %>
+  <%= f.input :looking_for_group, label: 'Looking for a group?', as: :radio_buttons %>
+  <%= f.submit 'Continue' %>
+<% end %>

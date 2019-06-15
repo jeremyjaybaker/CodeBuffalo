@@ -1,0 +1,7 @@
+<h1>placeholder</h1>
+Interests: <%= @user.interest_categories %><br/>
+Budget: <%= @user.budget_type.name %><br/>
+Looking for group: <%= @user.looking_for_group? ? 'Yes' : 'No' %>
+
+<br/><br/>
+<%= link_to 'Logout', destroy_user_session_path, method: :delete  %>
